@@ -37,7 +37,7 @@
   .hero{
     position:relative;min-height:100vh;display:flex;align-items:center;
     background:linear-gradient(180deg,rgba(51,38,34,.55),rgba(51,38,34,.82)),
-      url('https://images.unsplash.com/photo-1631549424057-403e75d68e2f?q=80&w=1800&auto=format&fit=crop') center/cover;
+      url('https://images.unsplash.com/photo-1785456390070-9960e3997066?q=80&w=1800&auto=format&fit=crop') center/cover;
     color:#fff;
   }
   .hero-inner{max-width:640px;padding:120px 24px 80px;margin:0 auto;width:100%;}
@@ -64,9 +64,8 @@
   .servicio-card h3{font-family:'Inter',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:10px;}
   .servicio-card p{color:var(--muted);font-size:.9rem;}
 
-  .galeria-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;}
-  .galeria-grid img{border-radius:16px;height:100%;object-fit:cover;}
-  .galeria-grid .col{display:grid;gap:18px;}
+  .galeria-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .galeria-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;display:block;}
 
   .porque{background:var(--charcoal);color:#fff;}
   .porque .section-head p{color:#d9c6bd;}
@@ -110,8 +109,9 @@
   .fab-wa{
     position:fixed;bottom:24px;right:24px;width:58px;height:58px;border-radius:50%;
     background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;
-    font-size:1.6rem;box-shadow:0 8px 22px rgba(0,0,0,.25);z-index:60;
+    box-shadow:0 8px 22px rgba(0,0,0,.25);z-index:60;
   }
+  .fab-wa svg{width:28px;height:28px;fill:#fff;}
 
   @media(max-width:860px){
     .stats-grid,.servicios-grid,.porque-grid,.pasos,.opiniones-grid{grid-template-columns:repeat(2,1fr);}
@@ -179,11 +179,8 @@
       <h2>Detalle en cada resultado</h2>
     </div>
     <div class="galeria-grid">
-      <img src="https://images.unsplash.com/photo-1631549424057-403e75d68e2f?q=80&w=1200&auto=format&fit=crop" alt="Peinado de novia">
-      <div class="col">
-        <img src="https://images.unsplash.com/photo-1785456390070-9960e3997066?q=80&w=900&auto=format&fit=crop" alt="Coloración de cabello">
-        <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=900&auto=format&fit=crop" alt="Manicura">
-      </div>
+      <img src="https://images.unsplash.com/photo-1549236177-f9b0031756eb?q=80&w=1000&auto=format&fit=crop" alt="Peinado de novia">
+      <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=1000&auto=format&fit=crop" alt="Manicura">
     </div>
   </div>
 </section>
@@ -266,7 +263,9 @@
   Propuesta de diseño para Jaqueline Costa Beauty Studio · demo, no es el sitio web oficial del negocio.
 </footer>
 
-<a class="fab-wa" href="https://wa.me/34614507688?text=Hola!%20Quiero%20reservar%20una%20cita" target="_blank" rel="noopener">🟢</a>
+<a class="fab-wa" href="https://wa.me/34614507688?text=Hola!%20Quiero%20reservar%20una%20cita" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.386.7 4.607 1.902 6.47L4 29l7.72-1.862A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3zm0 21.818a9.77 9.77 0 0 1-4.98-1.36l-.357-.213-3.61.87.87-3.512-.232-.362A9.78 9.78 0 0 1 6.18 15c0-5.42 4.406-9.818 9.824-9.818 5.417 0 9.822 4.398 9.822 9.818 0 5.421-4.405 9.818-9.822 9.818z"/><path d="M21.11 17.66c-.29-.146-1.71-.844-1.975-.94-.265-.096-.458-.145-.652.146-.193.29-.748.94-.916 1.134-.169.193-.338.217-.628.072-.29-.146-1.224-.451-2.332-1.44-.862-.769-1.444-1.72-1.613-2.01-.169-.29-.018-.446.127-.591.13-.13.29-.338.435-.507.145-.169.193-.29.29-.483.096-.193.048-.362-.024-.507-.072-.146-.652-1.572-.893-2.153-.235-.564-.474-.487-.652-.496a11.74 11.74 0 0 0-.556-.01c-.193 0-.507.072-.773.362-.265.29-1.013.99-1.013 2.415s1.037 2.803 1.182 2.996c.145.193 2.042 3.117 4.947 4.372.691.298 1.23.476 1.65.61.693.22 1.324.19 1.823.115.556-.083 1.71-.699 1.951-1.373.242-.674.242-1.253.169-1.373-.073-.121-.266-.194-.556-.34z"/></svg>
+</a>
 
 </body>
 </html>
